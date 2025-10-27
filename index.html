@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alex Styles — Portfolio</title>
+
+    <!-- ✅ This is the link that connects the CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1 class="logo">Alex Styles</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="about" class="section about">
+      <h2>About Me</h2>
+      <p>
+        I’m Alex Styles — a minimalist, modern, and slightly edgy designer who
+        believes in crafting bold, user-first digital experiences. My focus:
+        design that breathes emotion, clarity, and impact.
+      </p>
+    </section>
+
+    <section id="portfolio" class="section portfolio">
+      <h2>Portfolio</h2>
+      <div class="grid">
+        <div class="project"><span>Project One</span></div>
+        <div class="project"><span>Project Two</span></div>
+        <div class="project"><span>Project Three</span></div>
+        <div class="project"><span>Project Four</span></div>
+        <div class="project"><span>Project Five</span></div>
+        <div class="project"><span>Project Six</span></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <h2>Contact</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>© 2025 Alex Styles. Designed with style.</p>
+    </footer>
+
+    <script>
+      // Fade-in animation on scroll
+      const projects = document.querySelectorAll(".project");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.2 }
+      );
+      projects.forEach((p) => observer.observe(p));
+    </script>
+  </body>
+</html>
